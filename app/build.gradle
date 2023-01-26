@@ -1,0 +1,163 @@
+plugins {
+    id 'com.android.application'
+    id 'kotlin-android'
+    id 'kotlin-android-extensions'
+}
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+
+android {
+    compileSdkVersion 32
+
+    defaultConfig {
+        applicationId "kr.co.smartbank.app"
+        minSdkVersion 23
+        targetSdkVersion 32
+        versionCode 57
+        versionName "2.6.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        multiDexEnabled true
+    }
+
+    buildTypes {
+        release {
+            // 프로가드 활성화
+            minifyEnabled true
+            shrinkResources true
+            // 기본 프로가드 설정
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            buildConfigField "boolean", "DEBUG_MODE", "false"
+        }
+        debug {
+            // 프로가드 활성화
+            minifyEnabled false
+            shrinkResources false
+            // 기본 프로가드 설정
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            // DEBUG_MODE 설정
+            buildConfigField "boolean", "DEBUG_MODE", "true"
+        }
+    }
+    useLibrary('org.apache.http.legacy')
+    lintOptions {
+        checkReleaseBuilds false
+        // Or, if you prefer, you can continue to check for errors in release builds,
+        // but continue the build even when errors are found:
+        abortOnError false
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
+    }
+    kotlinOptions {
+        jvmTarget = '11'
+    }
+    buildFeatures{
+        dataBinding = true
+    }
+}
+
+dependencies {
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+    implementation 'androidx.core:core-ktx:1.5.0'
+    implementation 'androidx.activity:activity-ktx:1.5.1'
+    implementation 'androidx.fragment:fragment-ktx:1.5.2'
+    implementation 'androidx.appcompat:appcompat:1.5.1'
+    implementation 'com.google.android.material:material:1.2.1'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+    implementation 'com.android.support:multidex:1.0.3'
+    testImplementation 'junit:junit:'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.3'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
+    //  라이브러리
+    implementation 'com.google.code.gson:gson:2.8.0'
+//    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6"
+//    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core-common:1.0.0"
+//    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6"
+    // 통신
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
+    implementation 'com.squareup.okhttp3:okhttp:3.14.9'
+    implementation 'com.squareup.okhttp3:logging-interceptor:3.11.0'
+    // fcm
+    implementation 'com.google.firebase:firebase-core:16.0.1'
+    implementation 'com.google.firebase:firebase-messaging:17.3.4'
+    // adid
+    implementation 'com.google.android.gms:play-services-auth:9.4.0'
+    // 이미지 로딩
+    implementation 'com.github.bumptech.glide:glide:4.3.0'
+    // 애니메이션
+    implementation 'com.daimajia.easing:library:2.0@aar'
+    implementation 'com.daimajia.androidanimations:library:2.3@aar'
+    //이미지로딩
+    implementation 'com.github.bumptech.glide:glide:4.3.0'
+    // gif loader
+    implementation 'pl.droidsonroids.gif:android-gif-drawable:1.2.17'
+
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    // 공동인증서
+    implementation files('libs/SignKorea-Android.jar')
+    implementation files('libs/mTranskeyCrypto.jar')
+    implementation files('libs/zxing_core.jar')
+
+    // x8byte
+    implementation files('libs/x8byte-common-2.2.8.jar')
+    implementation files('libs/x8byte-safetoken-android-3.2.1.jar')
+    implementation files('libs/x8byte-safetoken-biometric-1.0.8.aar')
+    implementation files('libs/x8byte-safetoken-pattern-1.0.4.aar')
+
+    //페이스 OCR 솔루션 2022-07-01 부로 페이스 버림
+    //implementation files('libs/LibPaceIdCardDecrypt-v1.0.1.release.jar')
+    //implementation files('libs/PaceIdCardRecogEncLibRelease-v1.3.1.jar')
+    //인지소프트 OCR 솔루션
+    implementation files('libs/OcrManager_v4.5.56.aar')
+
+    //에버스핀 보안키패드
+    implementation files('libs/eversafe_keypad_android_library-0.11.0.aar')
+    implementation files('libs/eversafe_android_library-standard-3.8.20.aar')
+
+    // 스크랩핑
+    implementation files('libs/sasapi_v2.6.5.jar')//i-SAS 2.0 core 라이브러리
+    implementation files('libs/commons-codec-1.5.jar')//다양한 인코딩, 디코딩을 제공하는 라이브러리
+    implementation files('libs/rhino-1.7.7.1.jar')//Rhino Javascript 엔진의 실행 라이브러리
+    implementation files('libs/json-simple-1.1.1.jar')//Json 포맷의 데이터 파싱 라이브러리
+
+    // 단말정보수집
+    implementation files('libs/libIncaCommon.jar')
+    implementation files('libs/libSLM.jar')
+    implementation files('libs/npcrypto.jar')
+}
+apply plugin: 'com.google.gms.google-services'
+
+
+afterEvaluate {
+    // Dex난독화 기능은 소스코드내 문자열 난독화, 더미코드 삽입, 안티디컴파일, 디버깅방지 기능을 제공합니다.
+    //assembleRelease.finalizedBy(obfuscateApk) // Release APK 생성 후 난독화 작업추가
+    //obfuscateApk.finalizedBy(signApk) // 난독화 적용후 Zipalign 작업 추가
+
+    //aab 버전이 현재 afterEvaluate 안먹히는 이슈가 있어서 apk 생성후 안드로아드 스튜디오 콘솔로 해당 명령어로 대체 처리
+
+    //난독화
+    //java -jar /Users/gimnamgyo/Documents/AndoridProject/SMART_ANDROID_APP/app/codemix/codemix_android.jar -i /Users/gimnamgyo/Documents/AndoridProject/SMART_ANDROID_APP/app/release/app-release.aab -s /Users/gimnamgyo/Documents/AndoridProject/SMART_ANDROID_APP/app/codemix/SettingFile.txt -d opt
+    //위변조
+    //jarsigner -verbose -sigalg SHA256withRSA -digestalg SHA-256 -keystore /Users/gimnamgyo/Documents/AndoridProject/SMART_ANDROID_APP/key/smartsb.jks /Users/gimnamgyo/Documents/AndoridProject/SMART_ANDROID_APP/app/release/app-release_codemix.aab key1
+//    assembleRelease.finalizedBy(obfuscateApk) // Release APK 생성 후 난독화 작업
+//    obfuscateApk.finalizedBy(zipAlignApk) // 난독화 적용 후 Zipalign 작업 추가
+//    zipAlignApk.finalizedBy(signApk) // Zipalign 작업 후 Sign 작업 추가
+}
+//난독화
+//def rootPath            = "/Users/gimnamgyo/Documents/AndoridProject/SMART_ANDROID_APP"
+def codemixPath         = "${rootDir}/app/codemix"         // Codemix 압축 해제한 디렉토리 경로
+def rlePath             = "${rootDir}/app/release/app-release_codemix.aab"
+def apkPath             = "${rootDir}/app/release/app-release.aab"         // 빌드된 APK 경로
+def keystorePath        = "${rootDir}/key/smartsb.jks"                 // Keystore 파일 경로
+
+task obfuscateApk(type: Exec) {
+    commandLine 'java -jar', "$codemixPath/codemix_android.jar",'-i',"$apkPath", '-s', "$codemixPath/SettingFile.txt" , "-d" , "opt"
+    workingDir = projectDir
+}
+task signApk(type: Exec) {
+    commandLine "jarsigner", '-verbose', '-sigalg', "SHA256withRSA", '-digestalg', "SHA-256", '-keystore', "$keystorePath", "$rlePath" , "key1"
+    workingDir = projectDir
+}

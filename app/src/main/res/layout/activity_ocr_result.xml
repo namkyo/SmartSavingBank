@@ -1,0 +1,391 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".solution.face.view.OcrResultActivity">
+    <include
+        android:id="@+id/include"
+        layout="@layout/activity_common" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:id="@+id/face_recog_titles"
+            android:layout_alignParentTop="true"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/face_recog_activity_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_25"
+                android:layout_marginTop="38dp"
+                android:text="신분증 확인"
+                android:textColor="@color/textBlack_363636"
+                android:textSize="@dimen/text_22"
+                android:textStyle="bold" />
+            <TextView
+                android:id="@+id/face_recog_activity_title_sub"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_25"
+                android:layout_marginTop="10dp"
+                android:text="이름과 주민번호을 제외한 정보는\n수정이 가능합니다"
+                android:textColor="@color/textBlack_363636"
+                android:textSize="@dimen/text_18"></TextView>
+
+
+
+
+
+            <ImageView
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="@dimen/margin_15"
+                android:layout_marginRight="@dimen/margin_15"
+                android:layout_marginBottom="-35dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:src="@drawable/ocr_photo_line_top" />
+
+
+            <ImageView
+                android:layout_alignTop="@+id/face_recog_titles"
+                android:id="@+id/id_result_recog_imageview_result"
+                android:layout_width="match_parent"
+                android:layout_marginLeft="@dimen/padding_20"
+                android:layout_marginRight="@dimen/padding_20"
+                android:layout_marginTop="@dimen/padding_15"
+                android:layout_marginBottom="@dimen/padding_15"
+                android:layout_height="wrap_content"/>
+            <ImageView
+                android:layout_marginTop="-35dp"
+                android:layout_marginLeft="@dimen/margin_15"
+                android:layout_marginRight="@dimen/margin_15"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:src="@drawable/ocr_photo_line_bottom" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:paddingBottom="50dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_margin="30dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/borderline"
+                    android:paddingBottom="@dimen/margin_10"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.7"
+                        android:layout_marginLeft="@dimen/margin_5"
+                        android:text="인식 종류"
+                        android:textSize = "15sp"/>
+
+
+                    <TextView
+                        android:id="@+id/id_result_recog_textview_idtype"
+                        android:layout_width="0dp"
+                        android:layout_marginLeft="@dimen/margin_5"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="주민등록증"
+                        android:textSize = "15sp"/>
+
+                </LinearLayout>
+
+
+                <!-- 이름 -->
+                <LinearLayout
+                    android:id="@+id/id_result_recog_layout_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/borderline"
+                    android:paddingBottom="@dimen/margin_10"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.7"
+                        android:layout_marginLeft="@dimen/margin_5"
+                        android:text="성명"
+                        android:textSize = "15sp"/>
+
+
+                    <EditText
+                        android:id="@+id/id_result_recog_edit_name"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginLeft="@dimen/margin_5"
+                        android:text="홍길동"
+                        android:background="@null"
+                        android:inputType="text"
+                        android:textSize = "15sp"/>
+                </LinearLayout>
+
+
+                <!-- 주민번호 -->
+                <LinearLayout
+                    android:id="@+id/id_result_recog_layout_idnumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:paddingBottom="@dimen/margin_10"
+                    android:background="@drawable/borderline"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.7"
+                        android:layout_marginLeft="@dimen/margin_5"
+                        android:text="주민등록번호"
+                        android:textSize = "15sp"/>
+
+
+                    <EditText
+                        android:id="@+id/id_result_recog_edit_idnumber"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:text="1234567890123"
+                        android:layout_marginLeft="@dimen/margin_5"
+                        android:enabled="false"
+                        android:inputType="number"
+                        android:textSize = "15sp"/>
+                </LinearLayout>
+
+
+                <!-- 발급일자 -->
+                <LinearLayout
+                    android:id="@+id/id_result_recog_layout_issuedate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/borderline"
+                    android:paddingBottom="@dimen/margin_10"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.7"
+                        android:layout_marginLeft="@dimen/margin_5"
+                        android:text="발급일자"
+                        android:textSize = "15sp"/>
+
+
+                    <EditText
+                        android:id="@+id/id_result_recog_edit_issuedate"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginLeft="@dimen/margin_5"
+                        android:background="@null"
+                        android:text="2012-04-01"
+                        android:inputType="phone"
+                        android:textSize = "15sp"/>
+                </LinearLayout>
+
+
+                <!-- 운전면허 번호 -->
+                <LinearLayout
+                    android:id="@+id/id_result_recog_layout_licensenumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="10dp"
+                    android:paddingBottom="@dimen/margin_10"
+                    android:background="@drawable/borderline"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.7"
+                        android:text="운전면허증 번호"
+                        android:layout_marginLeft="@dimen/margin_5"
+                        android:textSize = "15sp"/>
+
+
+                    <EditText
+                        android:id="@+id/id_result_recog_edit_licensenumber"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="서울-1212"
+                        android:inputType="text"
+                        android:enabled="false"
+                        android:background="@null"
+                        android:layout_marginLeft="@dimen/margin_5"
+                        android:textSize = "15sp"/>
+                </LinearLayout>
+
+
+                <!-- 운전면허 적성검사일 -->
+                <LinearLayout
+                    android:id="@+id/id_result_recog_layout_licenseupdate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="10dp"
+                    android:paddingBottom="@dimen/margin_10"
+                    android:background="@drawable/borderline"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_5"
+                        android:layout_weight="0.7"
+                        android:text="운전면허 적성검사일"
+                        android:textSize = "15sp"/>
+
+
+                    <EditText
+                        android:id="@+id/id_result_recog_edit_licenseupdate"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:text="2017-02-01"
+                        android:layout_marginLeft="@dimen/margin_5"
+                        android:inputType="phone"
+                        android:textSize = "15sp"/>
+                </LinearLayout>
+
+                <!-- 운전면허 체크디짓 -->
+                <LinearLayout
+                    android:id="@+id/id_result_recog_layout_licensecheck"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal"
+                    android:background="@drawable/borderline"
+                    android:paddingBottom="@dimen/margin_10"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.7"
+                        android:text="운전면허 체크번호"
+                        android:layout_marginLeft="@dimen/margin_5"
+                        android:textSize = "15sp"/>
+
+
+                    <EditText
+                        android:id="@+id/id_result_recog_edit_licensecheck"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text=""
+                        android:layout_marginLeft="@dimen/margin_5"
+                        android:background="@null"
+                        android:inputType="text"
+                        android:textSize = "15sp"/>
+                </LinearLayout>
+
+                <!-- 발급처 -->
+                <LinearLayout
+                    android:id="@+id/id_result_recog_layout_office"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/borderline"
+                    android:paddingBottom="@dimen/margin_10"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.7"
+                        android:layout_marginLeft="@dimen/margin_5"
+                        android:text="발급처"
+                        android:textSize = "15sp"/>
+
+
+                    <EditText
+                        android:id="@+id/id_result_recog_edit_office"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginLeft="@dimen/margin_5"
+                        android:text="홍길동"
+                        android:background="@null"
+                        android:inputType="text"
+                        android:textSize = "15sp"/>
+                </LinearLayout>
+
+                <!-- 안내멘트 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal"
+                    android:paddingBottom="@dimen/margin_10">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.7"
+                        android:text="입력값을 정확히 확인 바랍니다"
+                        android:textColor="@color/red"
+                        android:layout_marginLeft="@dimen/margin_5"
+                        android:textSize = "15sp"/>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+
+    </ScrollView>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_btn_45"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true">
+        <Button
+            android:id="@+id/face_recog_cancel"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/all_btn_gray_onoff"
+            android:text="재 촬 영"
+            android:textColor="@color/textBlack_010101"
+            android:textSize="@dimen/text_16" />
+
+        <Button
+            android:id="@+id/face_recog_next"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/all_btn_blue_onoff"
+            android:text="확  인"
+            android:textColor="@color/textWhite_ffffff"
+            android:textSize="@dimen/text_16" />
+    </LinearLayout>
+</RelativeLayout>
+

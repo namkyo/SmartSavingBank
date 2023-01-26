@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/cert_backgroud"
+    android:gravity="center_vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/cert_list_body"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+        <ImageView
+            android:layout_marginTop="@dimen/margin_20"
+            android:layout_marginLeft="@dimen/margin_25"
+            android:layout_marginBottom="@dimen/margin_25"
+            android:id="@+id/img_cert"
+            android:layout_width="85dp"
+            android:layout_height="85dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/cert_run_yes"/>
+        <LinearLayout
+            android:layout_marginLeft="@dimen/margin_25"
+            android:layout_marginRight="50dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/txt_subject"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_5"
+                android:ellipsize="end"
+                android:lines="1"
+                android:text="이름"
+                android:textColor="@color/textBlack_2b2b2b"
+                android:textSize="@dimen/text_14"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/txt_explain"
+                android:text="구분"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/textGray_747474"
+                android:textSize="@dimen/text_12" />
+            <TextView
+                android:layout_marginTop="@dimen/margin_5"
+                android:id="@+id/txt_issuer"
+                android:text="발급자"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/textGray_747474"
+                android:textSize="@dimen/text_12" />
+            <TextView
+                android:id="@+id/txt_expiredday"
+                android:text="만료일"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/textGray_747474"
+                android:textSize="@dimen/text_12" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_marginRight="@dimen/margin_25"
+        android:layout_marginLeft="@dimen/margin_25"
+        android:layout_marginBottom="@dimen/margin_15"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+        <Button
+            android:id="@+id/cert_list_pw_change_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_weight="1"
+            android:background="@drawable/all_btn_gray_onoff"
+            android:textColor="@color/textBlack_010101"
+            android:textSize="@dimen/text_14"
+            android:text="비밀번호변경"
+            android:layout_alignParentBottom="true"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="       "/>
+        <Button
+            android:id="@+id/cert_list_delete_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_weight="1"
+            android:background="@drawable/all_btn_gray_onoff"
+            android:textColor="@color/textBlack_010101"
+            android:textSize="@dimen/text_14"
+            android:text="인증서 삭제"
+            android:layout_alignParentBottom="true"/>
+        />
+    </LinearLayout>
+    </LinearLayout>
+
+
+</RelativeLayout>

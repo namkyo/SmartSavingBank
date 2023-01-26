@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="kr.co.smartbank.app"
+    xmlns:tools="http://schemas.android.com/tools">
+    <!-- mVaccine 권한추가 -->
+    <!-- java/net/URL;->openConnection() -->
+    <uses-permission android:name="android.permission.INTERNET" />
+
+
+    <!-- android/app/ActivityManager;->getRunningTasks(I) -->
+    <uses-permission android:name="android.permission.GET_TASKS" />
+
+    <!-- targetSdk 28 이상에서 빌드할 경우 삭제 권한 필요 -->
+    <uses-permission android:name="android.permission.REQUEST_DELETE_PACKAGES" />
+
+    <!-- android Q에서 탐지 결과표시를 헤드업노티로 띄워주기 위해 사용 -->
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.USE_FULL_SCREEN_INTENT" />
+
+    <!-- 공동인증서 -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_NUMBERS" />
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
+
+    <!-- OCR -->
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.hardware.camera.autofocus" />
+
+
+    <!-- Wifi related -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_MULTICAST_STATE"/>
+    <uses-feature android:name="android.hardware.wifi"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESS" />
+
+
+    <application
+        android:largeHeap="true"
+        android:allowBackup="false"
+        android:fullBackupContent="false"
+        android:fullBackupOnly="false"
+        android:hardwareAccelerated="true"
+        android:usesCleartextTraffic="true"
+        android:icon="@mipmap/ic_smart_new2_app_icon"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_smart_new2_app_icon_round"
+        android:supportsRtl="true"
+        android:requestLegacyExternalStorage="true"
+        android:theme="@style/AppTheme"
+        android:networkSecurityConfig="@xml/network_security_config"
+        tools:targetApi="n">
+
+        <!-- input type="file" 처리 -->
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true"
+            tools:ignore="MissingClass">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+        <!-- fcm -->
+        <service
+            android:name=".fcm.FireBaseMessagingService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+
+        <service android:name="kr.co.everspin.eversafe.service.EversafeService"
+            android:enabled="true"
+            android:isolatedProcess="true"
+            />
+
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_channel_id"
+            android:value="@string/default_notification_channel_id" />
+        <!-- FCM end -->
+
+
+        <activity android:name=".view.SplashActivity"
+            android:exported="true"
+            android:screenOrientation="portrait">
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:host="action" android:scheme="smartsbapp" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".view.TestActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize|screenSize|smallestScreenSize|screenLayout"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".view.MainActivity"
+            android:screenOrientation="portrait"
+            android:configChanges="orientation|keyboardHidden|screenSize|screenSize|smallestScreenSize|screenLayout"
+            android:theme="@style/webview"/>
+
+        <activity
+            android:name=".view.PermissionActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize|screenSize|smallestScreenSize|screenLayout"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".view.PushActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize|screenSize|smallestScreenSize|screenLayout"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".view.UserAuthActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize|screenSize|smallestScreenSize|screenLayout"
+            android:screenOrientation="portrait"/>
+
+        <activity
+            android:name=".view.LoginModeActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize|screenSize|smallestScreenSize|screenLayout"
+            android:screenOrientation="portrait"/>
+
+        <!-- 공동인증서 -->
+        <activity
+            android:name=".solution.ksw.view.KSW_Activity_CertList"
+            android:configChanges="orientation|keyboardHidden|screenSize|screenSize|smallestScreenSize|screenLayout"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".solution.ksw.view.KSW_Activity_CertManager"
+            android:configChanges="orientation|keyboardHidden|screenSize|screenSize|smallestScreenSize|screenLayout"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".solution.ksw.view.KSW_Activity_ChangeCertPwd"
+            android:configChanges="orientation|keyboardHidden|screenSize|screenSize|smallestScreenSize|screenLayout"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".solution.ksw.view.KSW_Activity_ICRSImportCert"
+            android:configChanges="orientation|keyboardHidden|screenSize|screenSize|smallestScreenSize|screenLayout"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".solution.ksw.view.KSW_Activity_Pwd_DecWireless"
+            android:configChanges="orientation|keyboardHidden|screenSize|screenSize|smallestScreenSize|screenLayout"
+            android:screenOrientation="portrait"/>
+
+        <activity
+            android:name=".solution.coocon.view.InputCaptchaActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize|screenSize|smallestScreenSize|screenLayout"
+            android:screenOrientation="portrait" />
+        <!-- OCR -->
+
+        <activity
+            android:name=".solution.face.view.OcrMainActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize|screenSize|smallestScreenSize|screenLayout"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".solution.face.view.OcrPreviewActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize|screenSize|smallestScreenSize|screenLayout"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".solution.face.view.OcrResultActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize|screenSize|smallestScreenSize|screenLayout"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".solution.face.view.OcrRecognizeActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize|screenSize|smallestScreenSize|screenLayout"
+            android:screenOrientation="portrait" />
+        <!-- 보안키패드 -->
+        <activity
+            android:name="kr.co.everspin.eversafe.keypad.activity.ESSecureKeypadActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize|screenSize|smallestScreenSize|screenLayout"
+            android:screenOrientation="portrait"
+            />
+        <activity
+            android:name=".solution.everspin.secureKeypad.PinView"
+            android:configChanges="orientation|keyboardHidden|screenSize|screenSize|smallestScreenSize|screenLayout"
+            android:screenOrientation="portrait"
+            />
+        <activity
+            android:name=".solution.everspin.secureKeypad.QwertyView"
+            android:configChanges="orientation|keyboardHidden|screenSize|screenSize|smallestScreenSize|screenLayout"
+            android:screenOrientation="portrait"
+            />
+        <activity
+            android:name=".solution.everspin.secureKeypad.CustomView"
+            android:configChanges="orientation|keyboardHidden|screenSize|screenSize|smallestScreenSize|screenLayout"
+            android:screenOrientation="portrait"
+            />
+        <activity
+            android:name=".solution.everspin.secureKeypad.CustomPinView"
+            android:configChanges="orientation|keyboardHidden|screenSize|screenSize|smallestScreenSize|screenLayout"
+            android:screenOrientation="portrait"
+            />
+
+        <!-- 푸쉬 이력 화면 -->
+        <activity
+            android:name=".view.push.PushHistList"
+            android:configChanges="orientation|keyboardHidden|screenSize|screenSize|smallestScreenSize|screenLayout"
+            android:screenOrientation="portrait"
+            />
+
+
+        <!-- eversafe  -->
+        <activity
+            android:name="kr.co.everspin.eversafe.antivirus.EversafeDashboardActivity"
+            android:theme="@android:style/Theme.NoTitleBar"
+            android:screenOrientation="portrait"
+            android:configChanges="orientation|screenSize"
+            android:launchMode="singleInstance"
+            android:exported="true" >
+        </activity>
+
+
+        <uses-library android:name="org.apache.http.legacy" android:required="false"/>
+    </application>
+
+
+</manifest>

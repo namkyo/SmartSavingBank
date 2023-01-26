@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="input_type">
+        <item>앞면 인식</item>
+        <item>뒷면 인식</item>
+    </string-array>
+    <string-array name="orientation">
+        <item>가로촬영</item>
+        <item>세로촬영</item>
+    </string-array>
+
+    <string-array name="idcard_camera_view_mode">
+        <item>카메라 모드(기본)</item>
+        <item>카메라 모드(디자인1)</item>
+        <item>카메라 모드(디자인2)</item>
+    </string-array>
+    
+    <string-array name="type">
+        <item>신분증</item>
+        <item>여권</item>
+        <item>명함</item>
+        <item>사업자등록증</item>
+        <item>자동차등록증</item>
+        <item>일반문서촬영</item>
+        <item>인감</item>
+    </string-array>
+    
+    <string-array name="license_region">
+        <item>서울</item>
+        <item>부산</item>
+        <item>경기</item>
+        <item>강원</item>
+        <item>충북</item>
+        <item>충남</item>
+        <item>전북</item>
+        <item>전남</item>
+        <item>경북</item>
+        <item>경남</item>
+        <item>제주</item>
+        <item>대구</item>
+        <item>인천</item>
+        <item>광주</item>
+        <item>대전</item>
+        <item>울산</item>
+    </string-array>
+
+    <string-array name="license_region_code">
+        <item>11</item>
+        <item>12</item>
+        <item>13</item>
+        <item>14</item>
+        <item>15</item>
+        <item>16</item>
+        <item>17</item>
+        <item>18</item>
+        <item>19</item>
+        <item>20</item>
+        <item>21</item>
+        <item>22</item>
+        <item>23</item>
+        <item>24</item>
+        <item>25</item>
+        <item>26</item>
+    </string-array>
+
+    <string-array name="license_region_firstCharUnique">
+        <item>서</item> //서울
+        <item>부</item> //부산
+        <item>강</item> //강원
+        <item>제</item> //제주
+        <item>인</item> //인천
+        <item>광</item> //광주
+        <item>울</item> //울산
+    </string-array>
+
+    <string-array name="license_region_firstCharUnique_str">
+        <item>서울</item> //서울
+        <item>부산</item> //부산
+        <item>강원</item> //강원
+        <item>제주</item> //제주
+        <item>인천</item> //인천
+        <item>광주</item> //광주
+        <item>울산</item> //울산
+    </string-array>
+
+    <string-array name="license_region_firstCharUnunique">
+        <item>충</item>
+        <item>전</item>
+        <item>경</item>
+        <item>대</item>
+    </string-array>
+
+    <string-array name="license_region_firstCharSet_Chung">
+      <item>충북</item>
+      <item>충남</item>
+    </string-array>
+
+    <string-array name="license_region_firstCharSet_Jeon">
+        <item>전북</item>
+        <item>전남</item>
+    </string-array>
+
+    <string-array name="license_region_firstCharSet_Gyeong">
+        <item>경기</item>
+        <item>경북</item>
+        <item>경남</item>
+    </string-array>
+
+    <string-array name="license_region_firstCharSet_Dae">
+        <item>대구</item>
+        <item>대전</item>
+    </string-array>
+
+    <!--second-->
+    <string-array name="license_region_secondCharUnique">
+        <item>울</item>
+        <item>기</item>
+        <item>원</item>
+        <item>구</item>
+        <item>천</item>
+        <item>전</item>
+    </string-array>
+
+    <string-array name="license_region_secondCharUnique_str">
+        <item>서울</item> //서울
+        <item>경기</item> //경기
+        <item>강원</item> //강원
+        <item>대구</item> //대구
+        <item>인천</item> //인천
+        <item>대전</item> //대전
+    </string-array>
+
+
+    <string-array name="license_region_secondCharUnunique">
+        <item>산</item>
+        <item>남</item>
+        <item>북</item>
+        <item>주</item>
+    </string-array>
+
+
+    <string-array name="license_region_secondCharSet_San">
+        <item>부산</item>
+        <item>울산</item>
+    </string-array>
+
+    <string-array name="license_region_secondCharSet_Nam">
+        <item>충남</item>
+        <item>전남</item>
+        <item>경남</item>
+    </string-array>
+
+    <string-array name="license_region_secondCharSet_Buk">
+        <item>충북</item>
+        <item>전북</item>
+        <item>경북</item>
+    </string-array>
+
+
+    <string-array name="license_region_secondCharSet_Ju">
+        <item>제주</item>
+        <item>광주</item>
+    </string-array>
+
+    <string-array name="count">
+        <item >1</item>
+        <item >2</item>
+        <item >3</item>
+        <item >4</item>
+    </string-array>
+
+</resources>

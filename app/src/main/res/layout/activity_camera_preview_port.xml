@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        layout="@layout/camera_preview_layout" />
+
+    <TextView
+        android:id="@+id/txt_camera_guide"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:layout_above="@id/camera_preview"
+        android:visibility="gone"
+        android:text="@string/str_id_front"
+        android:textColor="@android:color/white" />
+
+    <Button
+        android:id="@+id/button_load_gallery"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:layout_centerVertical="true"
+        android:layout_margin="15dp"
+        android:background="@drawable/gallery"
+        android:visibility="gone"/>
+
+    <Button
+        android:id="@+id/button_cancel_camera"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_margin="15dp"
+        android:background="@drawable/btn_close" />
+
+    <ToggleButton
+        android:id="@+id/tb_guide"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_centerVertical="true"
+        android:layout_margin="15dp"
+        android:textOn="가이드On"
+        android:textOff="가이드Off"
+        android:textSize="12sp"
+        android:visibility="gone"/>
+
+    <LinearLayout
+        android:id="@+id/ly_findedge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignRight="@+id/button_take_camera"
+        android:layout_margin="15dp"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <ImageButton
+            android:id="@+id/button_findedge"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/ic_crop_white_48dp"
+            android:gravity="center" />
+
+        <TextView
+            android:id="@+id/tv_findedge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="@string/auto_shooting"
+            android:textColor="@android:color/white"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/button_take_camera"
+        android:layout_width="70dp"
+        android:layout_height="110dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_marginBottom="15dp"
+        android:background="@drawable/selector_camera_button" />
+
+    <ToggleButton
+        android:id="@+id/toggle_bizcard_type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/ly_findedge"
+        android:layout_alignParentLeft="true"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="15dp"
+        android:background="@android:drawable/btn_default"
+        android:textColor="@android:color/black"
+        android:textOn="세로명함"
+        android:textOff="가로명함"
+        android:visibility="gone"/>
+
+    <FrameLayout
+        android:id="@+id/camerapreview_frame_progress"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/transparent"
+        android:visibility="gone">
+
+        <ProgressBar
+            android:id="@+id/camerapreview_frame_progressbar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center" />
+    </FrameLayout>
+
+</RelativeLayout>

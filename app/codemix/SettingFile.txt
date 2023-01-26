@@ -1,0 +1,66 @@
+packing{
+    set none;
+ }
+dex{
+    set antidecompile,stringenc, dummy ,removedebuginfo;
+    class com.android.** {
+        set none;
+     }
+    class android.** {
+        set none;
+    }
+    class androidx.** {
+        set none;
+    }
+    class kotlin.** {
+        set none;
+    }
+    class kotlinx.** {
+        set none;
+    }
+    class kr.co.coocon.sasapi.** {
+        set none;
+    }
+    class kr.co.coocon.org.** {
+        set none;
+    }
+    class kr.co.coocon.v8.** {
+        set none;
+    }
+    class com.nprotect.** {
+        set none;
+    }
+    class kr.co.smartbank.app.service.** {
+        set none;
+    }
+    class kr.co.everspin.eversafe.EversafeHelper.** {
+        set none;
+    }
+    class kr.co.everspin.eversafe.Eversafe.** {
+        set none;
+    }
+    class kr.co.everspin.eversafe.keypad.** {
+        set none;
+    }
+    class com.inzisoft.** {
+       set none;
+    }
+    class ckellinwood.sigblock.** {
+        set none;
+    }
+    class sys.util.** {
+        set none;
+    }
+    class com.lumensoft.** {
+        set none;
+    }
+    class com.signkorea.** {
+        set none;
+    }
+    class com.google.** {
+        set none;
+    }
+}
+resources{
+    set nameencoding;
+}

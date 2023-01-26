@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "368053182677",
+    "project_id": "smartsbapp",
+    "storage_bucket": "smartsbapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:368053182677:android:988f8497ae9c7eadb1025c",
+        "android_client_info": {
+          "package_name": "kr.co.smartbank.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "368053182677-erjoc5g2v72d2tm01qtflh6j6u5q2vrq.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "kr.co.smartbank.app",
+            "certificate_hash": "18ad9fe75546916bfb13fb9554995b9dad78907a"
+          }
+        },
+        {
+          "client_id": "368053182677-fl1739gttciij3k4j3c4208lnltpeuc1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBdVj_CyFsdaGsLw_bFYBZl6t1CBwInG4Y"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "368053182677-fl1739gttciij3k4j3c4208lnltpeuc1.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "368053182677-8m98ul2v3l3os8pccv782f4p2qoupj4p.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "kr.co.smartSB.app",
+                "app_store_id": "1552329994"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

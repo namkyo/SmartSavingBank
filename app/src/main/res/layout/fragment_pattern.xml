@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+    <include
+        android:id="@+id/include"
+        layout="@layout/activity_common" />
+
+    <ImageView
+        android:id="@+id/patturn_at_btn_close"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:scaleType="fitXY"
+        android:layout_alignParentRight="true"
+        android:layout_margin="25dp"
+        android:src="@drawable/all_nobar_btn_close" />
+
+
+    <LinearLayout
+        android:id="@+id/patturn_at_titles"
+        android:layout_alignParentTop="true"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/patturn_at_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="120dp"
+            android:text="패턴입력"
+            android:textColor="@color/textBlack_363636"
+            android:textSize="@dimen/text_22"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/patturn_at_sub_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="10dp"
+            android:text="패턴을 그려주세요"
+            android:textColor="@color/textBlack_363636"
+            android:textSize="@dimen/text_18"></TextView>
+    </LinearLayout>
+
+
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="@dimen/padding_25"
+        android:paddingTop="157dp"
+        android:paddingRight="@dimen/padding_25"
+        android:paddingBottom="@dimen/padding_30"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <eightbyte.safetoken.pattern.view.PatternLockView
+                android:id="@+id/pattern_lock_view"
+                android:layout_width="280dp"
+                android:layout_height="280dp"
+                app:aspectRatio="square"
+                app:aspectRatioEnabled="true"
+                app:dotAnimationDuration="150"
+                app:dotCount="3"
+                app:dotNormalSize="@dimen/pattern_dot_size"
+                app:dotSelectedSize="@dimen/pattern_dot_selected_size"
+                app:normalStateColor="@color/gray_c2c2c2"
+                app:dotOuterCircleColor="@color/blue_009fe8"
+                app:pathColor="@color/blue_009fe8" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/patturn_at_btn_close2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textStyle="bold"
+            android:text="다른 인증수단을 선택하시겠습니까"/>
+    </LinearLayout>
+
+
+</RelativeLayout>

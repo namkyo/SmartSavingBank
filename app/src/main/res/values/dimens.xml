@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="padding_5">5dp</dimen>
+    <dimen name="padding_10">10dp</dimen>
+    <dimen name="padding_15">15dp</dimen>
+    <dimen name="padding_20">20dp</dimen>
+    <dimen name="padding_25">25dp</dimen>
+    <dimen name="padding_30">30dp</dimen>
+
+    <dimen name="margin_5">5dp</dimen>
+    <dimen name="margin_10">10dp</dimen>
+    <dimen name="margin_15">15dp</dimen>
+    <dimen name="margin_20">20dp</dimen>
+    <dimen name="margin_25">25dp</dimen>
+    <dimen name="margin_35">35dp</dimen>
+    <dimen name="margin_45">45dp</dimen>
+    <dimen name="margin_50">50dp</dimen>
+
+    <dimen name="width_1">1dp</dimen>
+    <dimen name="width_progress_98">98dp</dimen>
+    <dimen name="width_rightbar_8">8dp</dimen>
+
+    <dimen name="height_1">1dp</dimen>
+    <dimen name="height_divider_10">10dp</dimen>
+    <dimen name="height_40">40dp</dimen>
+    <dimen name="height_tb_62">62dp</dimen>
+    <dimen name="height_btn_30">30dp</dimen>
+    <dimen name="height_btn_45">45dp</dimen>
+    <dimen name="height_btn_53">53dp</dimen>
+
+    <dimen name="text_10">10dp</dimen>
+    <dimen name="text_12">12dp</dimen>
+    <dimen name="text_14">14dp</dimen>
+    <dimen name="text_16">16dp</dimen>
+    <dimen name="text_18">18dp</dimen>
+    <dimen name="text_20">20dp</dimen>
+    <dimen name="text_22">22dp</dimen>
+    <dimen name="text_25">25dp</dimen>
+    <dimen name="text_30">30dp</dimen>
+
+    <!-- Pattern -->
+    <dimen name="pattern_path_width">8dp</dimen> <!-- 6dp -->
+    <dimen name="pattern_dot_size">17dp</dimen> <!-- 12dp -->
+    <dimen name="pattern_dot_selected_size">29dp</dimen> <!-- 12dp -->
+    <dimen name="pattern_dot_outer_size">36dp</dimen>
+
+
+    <!-- OCR -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+</resources>

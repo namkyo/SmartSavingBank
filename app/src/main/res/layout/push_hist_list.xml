@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".view.push.PushHistList">
+    <include
+        android:id="@+id/include"
+        layout="@layout/activity_common" />
+
+    <TextView
+        android:id="@+id/push_hist_list_yn"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="푸쉬 발송 내역이 없습니다"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:textSize="@dimen/text_22"
+        android:textStyle="bold"
+
+        ></TextView>
+    <ImageView
+        android:id="@+id/push_hist_list_btn_close"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:scaleType="fitXY"
+        android:layout_alignParentRight="true"
+        android:layout_margin="25dp"
+        android:src="@drawable/all_nobar_btn_close" />
+
+    <LinearLayout
+        android:id="@+id/cert_list_titleLayout"
+        android:layout_alignParentTop="true"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/push_hist_list_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_25"
+            android:layout_marginTop="38dp"
+            android:text="푸쉬이력"
+            android:textColor="@color/textBlack_363636"
+            android:textSize="@dimen/text_22"
+            android:textStyle="bold" />
+        <TextView
+            android:id="@+id/push_hist_list_title_sub"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_25"
+            android:layout_marginTop="10dp"
+            android:text="푸쉬 발송 이력을 확인가능합니다"
+            android:textColor="@color/textBlack_363636"
+            android:textSize="@dimen/text_18"></TextView>
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/push_hist_list_content"
+        android:layout_below="@+id/cert_list_titleLayout"
+        android:layout_marginRight="@dimen/margin_25"
+        android:layout_marginLeft="@dimen/margin_25"
+        android:layout_marginTop="@dimen/margin_25"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:dividerHeight="@dimen/height_divider_10"
+        android:divider="@null"
+        android:overScrollMode="never"
+        android:scrollbars="none">
+    </ListView>
+</RelativeLayout>

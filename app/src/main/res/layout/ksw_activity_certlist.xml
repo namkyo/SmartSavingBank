@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".solution.ksw.view.KSW_Activity_CertList">
+    <include
+        android:id="@+id/include"
+        layout="@layout/activity_common" />
+
+    <ImageView
+        android:id="@+id/btn_cert_list_close"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:scaleType="fitXY"
+        android:layout_alignParentRight="true"
+        android:layout_margin="25dp"
+        android:src="@drawable/all_nobar_btn_close" />
+
+    <LinearLayout
+        android:id="@+id/cert_list_titleLayout"
+        android:layout_alignParentTop="true"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/cert_list_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_25"
+            android:layout_marginTop="38dp"
+            android:text="공동인증서 관리"
+            android:textColor="@color/textBlack_363636"
+            android:textSize="@dimen/text_22"
+            android:textStyle="bold" />
+        <TextView
+            android:id="@+id/cert_list_title_sub"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_25"
+            android:layout_marginTop="10dp"
+            android:text="인증서를 선택해주세요"
+            android:textColor="@color/textBlack_363636"
+            android:textSize="@dimen/text_18"></TextView>
+    </LinearLayout>
+
+    <ListView
+        android:layout_below="@+id/cert_list_titleLayout"
+        android:layout_marginRight="@dimen/margin_25"
+        android:layout_marginLeft="@dimen/margin_25"
+        android:layout_marginTop="@dimen/margin_25"
+        android:id="@+id/usercertlist"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:dividerHeight="@dimen/height_divider_10"
+        android:divider="@null"
+        android:overScrollMode="never"
+        android:scrollbars="none">
+    </ListView>
+</RelativeLayout>

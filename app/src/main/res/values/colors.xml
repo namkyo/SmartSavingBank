@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#009fe8</color>
+    <color name="colorPrimaryDark">#009fe8</color>
+    <color name="colorAccent">#008ecf</color>
+
+    <color name="white_opacity">#66ffffff</color>
+    <color name="light_gray">#d7d7d7</color>
+    <color name="lighter_gray">#e7e7e7</color>
+    <color name="medium_gray">#999999</color>
+    <color name="dark_gray">#333333</color>
+    <color name="main_blue">#3344aa</color>
+    <color name="main_pink">#ff6699</color>
+    <color name="black">#ff000000</color>
+
+
+    <color name="white11">#4dffffff</color>
+
+    <color name="nextBtn">#072E5E</color>
+    <color name="cancelBtn">#F5F5F5</color>
+    <color name="white">#ffffff</color>
+    <color name="white_b3ffffff">#b3ffffff</color>
+    <color name="blue_f0faff">#f0faff</color>
+    <color name="blue_009fe8">#009fe8</color>
+    <color name="blue_008ecf">#008ecf</color>
+    <color name="blue_0b5e84">#0b5e84</color>
+    <color name="gray_c2c2c2">#c2c2c2</color>
+    <color name="gray_f7f7f7">#f7f7f7</color>
+    <color name="gray_cecece">#cecece</color>
+    <color name="gray_949494">#949494</color>
+    <color name="gray_9d9d9d">#9d9d9d</color>
+
+    <color name="smart_color01">#FFE7A7</color>
+    <color name="smart_color02">#F0F3FE</color>
+
+    <color name="line_93a1cf">#93a1cf</color>
+    <color name="lineGray_cecece">#cecece</color>
+    <color name="lineGray_b5b5b5">#b5b5b5</color>
+    <color name="line_b9b9b9">#b9b9b9</color>
+
+
+    <color name="textWhite_ffffff">#ffffff</color>
+    <color name="textBlack_363636">#363636</color>
+    <color name="textBlack_010101">#010101</color>
+    <color name="textBlack_2b2b2b">#2b2b2b</color>
+    <color name="textGray_7a7a7a">#7a7a7a</color>
+    <color name="textGray_747474">#747474</color>
+    <color name="textGray_474747">#474747</color>
+    <color name="textGray_656565">#656565</color>
+    <color name="textGray_7d7d7d">#7d7d7d</color>
+    <color name="textRed_b40a0a">#b40a0a</color>
+
+    <!-- 라온 백신 -->
+    <color name="index0">#ffffffff</color>
+    <color name="index1">#fff9f9f9</color>
+    <color name="index2">#fff5f5f5</color>
+    <color name="index3">#fff1f1f1</color>
+    <color name="index4">#ffe8e8e8</color>
+    <color name="index5">#ffe7e7e7</color>
+    <color name="index6">#ffd8d8d8</color>
+    <color name="index7">#ffd1d1d1</color>
+    <color name="index8">#ffc9c9c9</color>
+    <color name="index9">#ffb9b9b9</color>
+    <color name="index10">#ffb4b4b4</color>
+    <color name="index11">#ff9e9e9e</color>
+    <color name="index12">#ff999999</color>
+    <color name="index13">#ff666666</color>
+    <color name="index14">#ff444444</color>
+    <color name="index15">#ff333333</color>
+    <color name="index16">#ff000000</color>
+    <color name="index17">#ffff0000</color>
+    <color name="index18">#ff00ff00</color>
+    <color name="index19">#ff0000ff</color>
+    <color name="index20">#ffff00ff</color>
+    <color name="index21">#ff747474</color>
+    <color name="index22">#ff484e51</color>
+    <color name="index23">#ff2d3032</color>
+
+    <!-- 라온 트랜스키 -->
+    <item name="blue" type="color">#FF33B5E5</item>
+    <item name="purple" type="color">#FFAA66CC</item>
+    <item name="green" type="color">#FF99CC00</item>
+    <item name="orange" type="color">#FFFFBB33</item>
+    <item name="red" type="color">#FFFF4444</item>
+    <item name="darkblue" type="color">#FF0099CC</item>
+    <item name="darkpurple" type="color">#FF9933CC</item>
+    <item name="darkgreen" type="color">#FF669900</item>
+    <item name="darkorange" type="color">#FFFF8800</item>
+    <item name="darkred" type="color">#FFCC0000</item>
+    <item name="testcolor" type="color">#FFCC0000</item>
+
+    <integer-array name="androidcolors">
+        <item>@color/blue</item>
+        <item>@color/purple</item>
+        <item>@color/green</item>
+        <item>@color/orange</item>
+        <item>@color/red</item>
+        <item>@color/darkblue</item>
+        <item>@color/darkpurple</item>
+        <item>@color/darkgreen</item>
+        <item>@color/darkorange</item>
+        <item>@color/darkred</item>
+        <item>@color/testcolor</item>
+    </integer-array>
+</resources>

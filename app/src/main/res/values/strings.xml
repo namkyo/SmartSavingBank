@@ -1,0 +1,232 @@
+<resources>
+    <string name="app_name">스마트저축은행 smart-i</string>
+
+    <!-- Pattern -->
+    <string name="ksw_activity_certsign_title">공동인증서 선택</string>
+    <string name="ksw_activity_certlist_title">공동인증서 관리</string>
+
+    <!-- Pattern -->
+    <string name="pattern_draw">패턴을 그려주세요.</string>
+    <string name="pattern_reg_hint">새로운 패턴을 입력하세요.</string>
+    <string name="pattern_validate_hint">패턴을 한번 더 그려주세요.</string>
+    <string name="pattern_reg_re_hint">패턴을 다시 입력하세요.</string>
+
+
+    <string name="success_pattern">패턴이 확인되었습니다.</string>
+    <string name="error_pattern_reg_re_hint">입력한 패턴이 다릅니다.\n다시 패턴을 입력하세요.</string>
+    <string name="error_pattern">패턴이 일치하지 않습니다.</string>
+    <string name="error_exceed_pattern_fail">패턴 최대 오류 횟수를 초과하였습니다.</string>
+    <string name="pattern_not_enuough">최소 4개 이상의 점을 연결하세요. 다시 패턴을 입력하세요.</string>
+
+    <!--  eversafe 백신 -->
+    <string name="es_os">임의 개조된 OS 환경에서 이용하실 수 없습니다.</string>
+    <string name="es_c_rom">커스텀 롬 환경에서는 이용하실 수 없습니다.</string>
+    <string name="es_app">정상 배포된 앱이 아닙니다.마켓에서 정상앱을 다운로드 받으시기바랍니다.</string>
+    <string name="es_debugger">앱의 위협요소가 있을 경우 실행할 수 없습니다.</string>
+    <string name="es_adb">USB 디버깅 모드를 해제하여 주십시요.</string>
+    <string name="es_wifi">WIFI 통신 모드에서는 앱을 실행할 수 없습니다.</string>
+    <string name="es_usb">USB 연결을 해제하여 주십시요.</string>
+    <string name="es_forgery">위변조된 동작입니다.</string>
+    <string name="es_proxy">Proxy 설정을 해제하여 주십시요.</string>
+    <string name="es_emulate">에뮬레이터에서 동작이 불가 합니다.</string>
+    <string name="es_remote_inst">원격 제어 앱을 삭제하고 실행하시기 바랍니다.</string>
+    <string name="es_remote_run">원격 제어 앱을 종료하고 실행하시기 바랍니다.</string>
+    <string name="es_non_registered">등록되지 않은 앱입니다.</string>
+    <string name="es_black_device">차단된 단말기 입니다.</string> <string name="es_loss">해당앱을 삭제해 주세요.</string>
+    <string name="es_network_error">네트워크가 불안정 합니다.</string> <string name="es_module_error">모듈 로딩 에러</string>
+    <string name="es_not_exist_module_error">모듈 초기화에 실패 했습니다. 앱을 다시 실행해 주세요.</string> <string name="es_unknown">정의되지 않은 보안위협 발견</string>
+    <string name="es_av_detect">진단 내역</string>
+    <string name="es_av_detect_desc">검출된 유해요소 입니다.</string>
+    <string name="es_av_allow">허용 내역</string>
+    <string name="es_av_allow_desc">사용자가 이 기기에서 실행 하도록 허용한 항목입니다.</string>
+    <string name="es_toast">"{{APP}} 는(은) Eversafe 에 의해 보호되고 있습니다."</string>
+    <string name="es_indicator_title">Eversafe {{VER}}</string>
+    <string name="es_indicator_ticker">Eversafe {{VER}}</string>
+    <string name="es_indicator_context">"{{APP}} 는(은) Eversafe 에 의해 보호되고있습니다."</string>
+
+
+    <string name="sc_txt_01">스크랩핑 진행중입니다 (1/12) 보안문자 요청\n\n5~10초 소요됩니다 잠시만 기다려주세요</string>
+    <string name="sc_txt_02">스크랩핑 진행중입니다 (2/12) 보안문자 검증\n\n1~2분 소요됩니다 잠시만 기다려주세요</string>
+    <string name="sc_txt_03">스크랩핑 진행중입니다 (3/12) 민원24 로그인\n\n1~2분 소요됩니다 잠시만 기다려주세요</string>
+    <string name="sc_txt_04">스크랩핑 진행중입니다 (4/12) 초본출력\n\n1~2분 소요됩니다 잠시만 기다려주세요</string>
+    <string name="sc_txt_05">스크랩핑 진행중입니다 (5/12) 민원24 로그아웃\n\n1~2분 소요됩니다 잠시만 기다려주세요</string>
+    <string name="sc_txt_06">스크랩핑 진행중입니다 (6/12) 건강보험공단 로그인\n\n1~2분 소요됩니다 잠시만 기다려주세요</string>
+    <string name="sc_txt_07">스크랩핑 진행중입니다 (7/12) 납부내역\n\n1~2분 소요됩니다 잠시만 기다려주세요</string>
+    <string name="sc_txt_08">스크랩핑 진행중입니다 (8/12) 자격득실확인서\n\n1~2분 소요됩니다 잠시만 기다려주세요</string>
+    <string name="sc_txt_09">스크랩핑 진행중입니다 (9/12) 공동인증서등록\n\n1~2분 소요됩니다 잠시만 기다려주세요</string>
+    <string name="sc_txt_10">스크랩핑 진행중입니다 (10/12) 홈택스 로그인\n\n1~2분 소요됩니다 잠시만 기다려주세요</string>
+    <string name="sc_txt_11">스크랩핑 진행중입니다 (11/12) 부가가치세증명원\n\n1~2분 소요됩니다 잠시만 기다려주세요</string>
+    <string name="sc_txt_12">스크랩핑 진행중입니다 (12/12) 소득금액증명원\n\n1~2분 소요됩니다 잠시만 기다려주세요</string>
+
+
+    <string name="resultCd_ok">0000</string>
+    <string name="resultCd_fail">9999</string>
+
+    <string name="FIN_FIRST">FIN_FIRST</string>
+    <string name="CUST_NO">CUST_NO</string>
+    <string name="RANDOM_KEY">RANDOM_KEY</string>
+    <string name="AUTH_MESG">AUTH_MESG</string>
+    <string name="SIGN">SIGN</string>
+
+
+
+    <!--사진옵션-->
+    <string name="isMasking">isMasking</string>
+    <string name="isDetail">isDetail</string>
+    <string name="isSerialNum">isSerialNum</string>
+    <!-- ocr -->
+    <string name="ocr_take_mode">take_mode</string>
+    <string name="ocr_type">type</string>
+    <string name="ocr_name">name</string>
+    <string name="ocr_rbrNo">rbrNo</string>
+    <string name="ocr_driveNo">driveNo</string>
+    <string name="ocr_secureNo">secureNo</string>
+    <string name="ocr_issueDate">issueDate</string>
+    <string name="ocr_issueOffice">issueOffice</string>
+    <string name="ocr_photoStr">photoStr</string>
+    <string name="ocr_detailPhotoStr">detailPhotoStr</string>
+    <string name="ocr_detailPhotoScore">detailPhotoScore</string>
+    <string name="ocr_image_making">ocr_image_making</string>
+    <string name="ocr_image_no_making">ocr_image_no_making</string>
+    <string name="ocr_image_face">ocr_image_face</string>
+
+
+    <!-- IngiSoft OCR -->
+    <string name="app_start">시작</string>
+
+    <string name="str_camera">카메라</string>
+    <string name="str_gallery">갤러리 이미지</string>
+    <string name="str_load">불러오기</string>
+
+    <string name="str_recognize_failed">인식을 실패하였습니다.</string>
+    <string name="str_recognize_result">인식결과</string>
+    <string name="str_recognize_unknown">인식 타입이 불분명합니다.</string>
+    <string name="str_check_ok">확인</string>
+    <string name="str_not_support_function">아직 지원하지 않습니다.</string>
+    <string name="str_timelock_fail">Timelock Fail</string>
+    <string name="str_packagelock_fail">PackageLock Fail</string>
+    <string name="str_recognition_type_fail">Invalid Recognition Type</string>
+    <string name="str_finding_id_card">신분증을 찾는 중입니다.</string>
+
+    <string name="str_masking">주민번호 마스킹</string>
+    <string name="str_masking_fp">지문 영역 마스킹</string>
+
+    <string name="check_masking">Enable Masking</string>
+    <string name="check_take_id_back_side">신분증 뒷면 촬영</string>
+    <string name="check_focus_and_takepicture">포커스 후 촬영</string>
+
+    <!-- CameraHandler -->
+    <string name="str_focus_error">초점이 흔들렸습니다. 다시 촬영해 주세요.</string>
+
+    <string name="str_idcard_guide_text">가운데 사각형에 신분증이 일치하도록 촬영하세요.</string>
+    <string name="str_bizcard_guide_text">가운데 사각형에 명함이 일치하도록 촬영하세요.</string>
+    <string name="str_failed_save_image">이미지 저장에 실패하였습니다. 다시 촬영해 주세요.</string>
+    <string name="str_getting_image_failed">이미지 가져오기를 실패하였습니다.</string>
+    <string name="str_not_supported_type">지원하지 않는 타입입니다. JPEG 타입만 지원합니다.</string>
+    <string name="str_camera_cancelled">촬영이 취소되었습니다.</string>
+    <string name="str_test_image_saved">촬영된 이미지가 저장 되었습니다.</string>
+
+    <!-- RecognizerActivity -->
+    <string name="str_recognize">인식</string>
+    <string name="str_retake">재촬영</string>
+    <string name="str_cancel">취소</string>
+    <string name="str_use">사용</string>
+    <string name="str_prev">이전</string>
+    <string name="str_next">다음</string>
+    <string name="str_recognize_n_edit">확인 / 편집</string>
+
+    <string name="str_creadit_guide_number">1234 5678 9012 3456</string>
+    <string name="str_creadit_guide_name">HONG  GIL  DONG</string>
+    <string name="str_creadit_guide_title">PLACE YOUR CARD HERE</string>
+
+
+    <!-- General -->
+    <string name="str_landscape">가로</string>
+    <string name="str_portrait">세로</string>
+    <string name="str_close">닫기</string>
+
+    <string name="str_recog_img">recognized image</string>
+
+    <!-- CameraPrevieweActivity -->
+    <string name="str_id_front">신분증 앞면</string>
+    <string name="str_id_back">신분증 뒷면</string>
+    <string name="str_biz_card">명함 촬영</string>
+    <string name="str_biz_regi_card">사업자 등록증 촬영</string>
+    <string name="str_car_regi_card">자동차 등록증 촬영</string>
+    <string name="str_passport">여권 촬영</string>
+    <string name="capture_guide_01">신분증 또는 문서를 가이드에\n맞추어 촬영해 주세요.</string>
+    <string name="capture_guide_02">반사광은 최소화 해주세요.</string>
+    <string name="capture_guide_03">자동촬영이 되지 않을 시에는\n수동촬영으로 전환해주세요</string>
+
+    <!-- ResultActivity -->
+    <string name="result_title">인식 결과</string>
+    <string name="result_type">타입 : </string>
+    <string name="result_name">이름 : </string>
+    <string name="result_id">주민번호 : </string>
+    <string name="result_issue_date">발급일자 : </string>
+    <string name="result_license_num">면허번호 : </string>
+    <string name="result_addr">주소</string>
+    <string name="btn_front">앞면</string>
+    <string name="btn_back">뒷면</string>
+    <string name="result_issue_office">발급처</string>
+
+
+    <string name="result_company">회사</string>
+    <string name="result_division">부서</string>
+    <string name="result_position">직책</string>
+    <string name="result_company_addr">회사주소</string>
+    <string name="result_office_phone">회사전화</string>
+    <string name="result_fax">팩스</string>
+    <string name="result_mobile_phone">휴대폰</string>
+    <string name="result_email">이메일</string>
+
+    <string name="convert_image">이미지 변환</string>
+    <string name="str_id">신분증</string>
+    <string name="encrypt">암호화</string>
+    <string name="str_card">신용카드</string>
+
+    <string name="result_card_title">신용카드</string>
+    <string name="id_type_card">주민등록증</string>
+    <string name="id_type_card_oversea">재외국민 주민등록증</string>
+    <string name="id_type_drivers">운전면허증</string>
+    <string name="type_car_regi">자동차등록증</string>
+    <string name="type_biz_regi">사업자등록증</string>
+    <string name="type_passport">여권</string>
+    <string name="id_type_card_biz">명함</string>
+    <string name="id_type_alien">외국인등록증</string>
+    <string name="id_type_compatriot">국내거소신고증</string>
+    <string name="id_type_welfare">복지카드</string>
+    <string name="id_type_honoree">유공자</string>
+    <string name="id_type_resident">영주증</string>
+    <string name="biz_card_title">명함 인식 결과</string>
+
+    <string name="auto_shooting">자동촬영</string>
+    <string name="info_not_auto_shooting">자동촬영 기능이 없는 버전입니다.</string>
+    <string name="result_type_card">인식타입</string>
+    <string name="result_number">카드번호</string>
+    <string name="result_date">유효기한</string>
+    <string name="preview_recognition">프리뷰 인식</string>
+
+    <string name="card_recog_error">카드 자동인식이 어려운 카드입니다.\n카드 번호를 직접 입력해 주세요.</string>
+    <string name="result_aptitude_date_end">적성검사 만료일</string>
+    <string name="result_aptitude_date_start">적성검사 시작일</string>
+    <string name="result_license_type">라이센스 타입</string>
+    <string name="result_security_serial">시리얼넘버</string>
+    <string name="result_masking">마스킹 결과</string>
+
+    <string name="str_error_info_recog">정보 인식이 어렵습니다.</string>
+    <string name="str_error_info_detail">신분증의 정보를 가리는\n방해물이 없는 지 확인 후 \n다시 촬영해주세요.</string>
+    <string name="str_error_line_recog">신분증을 네모 영역에 넣어주세요.</string>
+    <string name="str_error_line_recog_detail">정확한 정보 인식을 위해\n네모 영역에 신분증을 넣은 후\n다시 촬영해주세요.</string>
+    <string name="str_error_reflection">빛 반사가 심합니다.</string>
+    <string name="str_error_reflection_detail">홀로그램이 보이지 않도록\n어두운 곳으로 이동하여\n다시 촬영해주세요.</string>
+    <string name="str_error_blur">이미지 흔들림이 심합니다.</string>
+    <string name="str_error_blur_detail">신분증을 바닥에 놓은 후\n카메라가 흔들리지 않도록\n다시 촬영해주세요.</string>
+    <string name="str_taking_guide_info">촬영 버튼을 눌러주세요.</string>
+    <string name="str_taking_guide">홀로그램 빛 반사를 피하시고\n어두운 배경에서 촬영해주세요.</string>
+    <string name="str_recog_fail">빛 반사 및 기울임에 문제가 있습니다.</string>
+    <string name="str_guide_in">네모 영역에 꽉 차게 맞춰주세요.</string>
+    <string name="result_idcard_idcard">주민등록증</string>
+    <string name="result_idcard_driver_license">운전면허증</string>
+    <string name="result_idcard_overseas">(재외국민)주민등록증</string>
+</resources>
